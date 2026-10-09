@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration  form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(
+                rgba(20, 20, 40, 0.4),
+                rgba(20, 20, 40, 0.4)),
+                url("icon.png");
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            h1 
+            {
+                text-align: center;
+                color: rgb(15, 15, 125);
+            }
+            form{
+                
+        width: 400px;
+        background-color: rgb(124, 54, 54);
+        padding: 25px;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(111, 137, 72);
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+    }
+    button {
+        background-color: rgb(119, 118, 141);
+        color: rgb(56, 16, 105);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;}
+
+button:hover {
+    background-color: rgb(74, 109, 74);
+}
+
+    </style>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+
+    <div>
+        <form action="">
+            <label>Full Name:</label> 
+            <input type="text" name="name" placeholder="Enter your full name">
+            <br><br>
+
+            <label>Email:</label> 
+            <input type="email" name="email" placeholder="Enter your email">
+            <br><br>
+
+            <label>Password:</label> 
+            <input type="password" name="password" placeholder="Enter your password">
+            <br><br>
+
+            <label>confirm Password:</label> 
+            <input type="password" name="confirm_password" placeholder="Enter your confirm_password">
+            <br><br>
+
+            <label>Gender:</label> <br>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female
+            <input type="radio" name="gender" value="Others">Others
+            <br><br>
+
+            <label>Date Of Birth:</label> 
+            <input type="date" name="DOB">
+            <br><br>
+
+            <label>Country:</label>
+            <select name="Country">
+                 <option value=""> Select Country</option>
+                  <option value="">India</option> 
+                  <option value="">USA</option>
+                   <option value="">UK</option>
+            </select>
+            <br><br>
+
+            <input type="checkbox" name="terms" value="accepted">
+            I agree to the terms and conditions
+            <br><br>
+
+            <button type="submit">Register now</button>
+        </form>
+    </div>    
+</body>
+</html>

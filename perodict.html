@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+    <style>
+        body {
+            background: rgb(65, 166, 225);
+            font-family: Arial;
+            text-align: center;
+        }
+
+        h3 {
+            color: rgb(38, 0, 128);
+        }
+
+        .tables {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            width: 30px;
+            height: 25px;
+            font-size: 12px;
+        }
+
+        .empty td {
+            background: white;
+        }
+
+        .filled td {
+            background: #b9e6f5;
+        }
+
+        .filled td:nth-child(3n) {
+            background: pink;
+        }
+
+        .filled td:nth-child(2n) {
+            background: #b8e994;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Multiplication Table Reference</h3>
+
+    <div class="tables">
+
+        <!-- Empty multiplication table -->
+        <div>
+            <h3>Empty table</h3>
+            <table class="empty">
+                <tr>
+                    <th>×</th>
+                    <script>
+                        for (let i = 1; i <= 12; i++) {
+                            document.write("<th>" + i + "</th>");
+                        }
+                    </script>
+                </tr>
+
+                <script>
+                    for (let i = 1; i <= 12; i++) {
+                        document.write("<tr><th>" + i + "</th>");
+                        for (let j = 1; j <= 12; j++) {
+                            document.write("<td></td>");
+                        }
+                        document.write("</tr>");
+                    }
+                </script>
+            </table>
+        </div>
+
+        <!-- Multiplication table with answers -->
+        <div>
+            <h3>multiplication with answers table</h3>
+            <table class="filled">
+                <tr>
+                    <th>×</th>
+                    <script>
+                        for (let i = 1; i <= 12; i++) {
+                            document.write("<th>" + i + "</th>");
+                        }
+                    </script>
+                </tr>
+
+                <script>
+                    for (let i = 1; i <= 12; i++) {
+                        document.write("<tr><th>" + i + "</th>");
+                        for (let j = 1; j <= 12; j++) {
+                            document.write("<td>" + (i * j) + "</td>");
+                        }
+                        document.write("</tr>");
+                    }
+                </script>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
